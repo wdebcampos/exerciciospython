@@ -1,43 +1,46 @@
-import random
-
-opções_usuario = int(input('''Suas opções:
+from random import randint
+from time import sleep
+itens = ('Pedra', 'Papel', 'Tesoura')
+computador = randint(0, 2)
+print('''Suas opções:
 [ 0 ] PEDRA
 [ 1 ] PAPEL
-[ 2 ] TESOURA
-Qual é a sua jogada? 
-'''))
-print(f'{"JOKENPO":=^40}')
-computador = int(random.randint(0, 2))
-print('Computador jogou ', end='')
+[ 2 ] TESOURA''')
+jogador = int(input('Qual é a sua jogada? '))
+print('JO')
+sleep(0.5)
+print('KEN')
+sleep(0.5)
+print('PO')
+sleep(0.5)
+print(f'{"":=^20}')
+print(f'Computador jogou {itens[computador]}')
+print(f'Jogador jogou {itens[jogador]}')
+print(f'{"":=^20}')
 if computador == 0:
-    print('PEDRA')
+    if jogador == 0:
+        print('Empate')
+    elif jogador == 1:
+        print('Jogador vence')
+    elif jogador == 2:
+        print('Computador vence')
+    else:
+        print('JOGADA INVÁLIDA')
 elif computador == 1:
-    print('PAPEL')
+    if jogador == 0:
+        print('Jogador vence')
+    elif jogador == 1:
+        print('Empate')
+    elif jogador == 2:
+        print('Computador vence')
+    else:
+        print('Jogada inválida')
 elif computador == 2:
-    print('TESOURA')
-print('Jogador jogou ', end='')
-if opções_usuario == 0:
-    print('PEDRA')
-elif opções_usuario == 1:
-    print('PAPEL')
-elif opções_usuario == 2:
-    print('TESOURA')
-print(f'{"JOKENPO":=^40}')
-if computador == 0 and opções_usuario == 0:
-    print(f'Jogo empate')
-elif computador == 0 and opções_usuario == 1:
-    print('Jogador venceu')
-elif computador == 0 and opções_usuario == 2:
-    print('Computador venceu')
-elif computador == 1 and opções_usuario == 0:
-    print('Computador venceu')
-elif computador == 1 and opções_usuario == 1:
-    print('Jogo empate')
-elif computador == 1 and opções_usuario == 2:
-    print('Jogador venceu')
-elif computador == 2 and opções_usuario == 0:
-    print('Jogador venceu')
-elif computador == 2 and opções_usuario == 1:
-    print('Computador venceu')
-elif computador == 2 and opções_usuario == 2:
-    print('Jogo empate')
+    if jogador == 0:
+        print('Jogador vence')
+    elif jogador == 1:
+        print('Computador vence')
+    elif jogador == 2:
+        print('Empate')
+    else:
+        print('Jogada inválida')
