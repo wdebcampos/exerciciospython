@@ -1,5 +1,4 @@
 import random
-from queue import PriorityQueue
 
 opções_usuario = int(input('''Suas opções:
 [ 0 ] PEDRA
@@ -24,7 +23,6 @@ elif opções_usuario == 1:
 elif opções_usuario == 2:
     print('TESOURA')
 print(f'{"JOKENPO":=^40}')
-# PEDRA
 if computador == 0 and opções_usuario == 0:
     print(f'Jogo empate')
 elif computador == 0 and opções_usuario == 1:
