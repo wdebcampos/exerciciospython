@@ -4,7 +4,7 @@ print('-' * 30)
 pessoas_mais_18_anos = homens_cadastrados = mulheres_menos_20_anos = 0
 while True:
     idade = int(input('Digite a idade: '))
-    if idade > 18:
+    if idade >= 18:
         pessoas_mais_18_anos += 1
     sexo = ' '
     while sexo not in 'MF':
