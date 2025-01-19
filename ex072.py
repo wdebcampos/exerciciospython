@@ -8,5 +8,7 @@ while True:
         print(f'tente novamente.', end='')
     else:
         print(extenso[nún])
-        break
-
+    continuar = str(input('Quer continuar: ')).upper().strip()
+    if continuar == 'N':
+            break
+print('fim do programa')
