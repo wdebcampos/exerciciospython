@@ -13,4 +13,3 @@ if len(pilha) == 0:
     print('expressão válida')
 else:
     print('Expressão inválida')
-
